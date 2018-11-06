@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>FL 9 3 homework AJAX</title>
+</head>
+<body>
+  <div class="app">
+    <div class="animation-block-wrapper">
+      <div class="loading-animation-hide" id="animHide">
+        <div class="lds-dual-ring"></div>
+      </div>
+      <div class="land-animation" id="land-animation">
+        <div class="trees"></div>
+        <ul class="mountains">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="sun"></div>
+        <div class="land-right"></div>
+        <div class="land-left"></div>
+        <div class="land-center"></div>
+        <div class="map-marker"></div>
+      </div>
+      <div class="sea-animation" id="sea-animation">
+        <div class="sea">
+          <div class="boat">
+            <div class="body">
+              <span class="water-line"></span>
+            </div>
+            <span class="mast"></span>
+            <span class="sail"></span>
+          </div>
+          <div class="waves">
+              <div class="wave"></div>
+              <div class="wave2"></div>
+              <div class="wave3"></div>
+              <div class="wave4"></div>
+          </div>
+        </div>
+        <div class="sun-sea"></div>
+        <div class="map-marker"></div>
+      </div>
+    </div> 
+    <form class="form-style">
+      <ul>
+        <li>
+            <label for="latitude">Latitude</label>
+            <input id="latitude" type="text" name="latitude" maxlength="100">
+            <span>Enter latitude</span>
+        </li>
+        <li>
+            <label for="longitude">Longitude</label>
+            <input id="longitude" type="text" name="longitude" maxlength="100">
+            <span>Enter longitude</span>
+        </li>
+        <li>
+            <button id="submit">Track</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

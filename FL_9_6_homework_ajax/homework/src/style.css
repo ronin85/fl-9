@@ -1,0 +1,504 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body,.app{
+    height: 100%;
+}
+
+.app{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*ANIMATION BLOCK STYLES*/
+.animation-block-wrapper {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    background-color: #fdd8ba;
+}
+
+/*FORM BLOCK STYLES*/
+.form-style{
+    max-width:400px;
+    background:#fff;
+    border-radius:2px;
+    padding:20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style h1{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    color: #5C5C5C;
+    font-size:x-large;
+}
+.form-style ul{
+    list-style:none;
+    padding:0;
+    margin:0;   
+}
+.form-style li{
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.form-style li:last-child{
+    border:none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.form-style li > label{
+    display: block;
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    height: 18px;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+    font-size: 14px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style li > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.form-style button{
+    background: #2471FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994FF;
+    border-radius: 3px;
+    color: #D2E2FF;
+}
+.form-style button:hover{
+    background: #6B9FFF;
+    color:#fff;
+}
+
+/* LOADING ANIMATION STYLES*/
+.loading-animation-hide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  }
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* LAND ANIMATION STYLES*/
+.land-animation{
+    display: none;
+}
+.mountains{
+    list-style:none;
+}
+ul.mountains li{
+    display: flex;
+}
+ul.mountains li:nth-child(1){
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right:75px solid transparent;
+    border-bottom: 130px solid #febca5;
+    bottom: 60px;
+    right: 150px;
+}
+ul.mountains li:nth-child(1)::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right:75px solid transparent;
+    border-bottom: 130px solid #fdac90;
+    margin: -10px -50px;
+}
+.land-right{
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 65px solid #004e40;;
+    border-left: 200px solid transparent;
+    right: 0;
+    bottom: 70px;
+}
+ul.mountains li:nth-child(2){
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-bottom:145px solid #00786a;
+    border-right: 35px solid transparent;
+    right: 140px;
+    bottom: 70px;
+}
+ul.mountains li:nth-child(2)::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-bottom: 145px solid #00786a;
+    border-left: 35px solid transparent;
+    margin: 0px -35px;
+}
+ul.mountains li:nth-child(3){
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid #004e40;
+    border-right: 50px solid transparent;
+    bottom: 70px;
+    right: 210px;
+
+}
+ul.mountains li:nth-child(3)::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid #00685a;
+    border-left: 50px solid transparent;
+    margin: 0px -50px;
+}
+ul.mountains li:nth-child(4){
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 150px solid #004e40;
+    border-right: 65px solid transparent;
+    right: 250px;
+    bottom: 70px;
+}
+ul.mountains li:nth-child(4)::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-bottom: 150px solid #00685a;
+    border-left: 65px solid transparent;
+    margin: 0px -65px;
+}
+ul.mountains li:nth-child(5){
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid #004e40;
+    border-right: 50px solid transparent;
+    left: 190px;
+    bottom: 70px;
+}
+ul.mountains li:nth-child(5)::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid #00685a;
+    border-left: 50px solid transparent;
+    margin: 0px -50px;
+}
+ul.mountains li:nth-child(6){
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 125px solid #008375;
+    bottom: 70px;
+    right: 170px;
+}
+.land-left{
+    position: absolute;
+    width: 520px;
+    height: 170px;
+    border-radius: 37% 51% 0 0;
+    background: #008375;
+    bottom: -90px;
+    left: -60px;
+}
+.land-center{
+    position: absolute;
+    width: 520px;
+    height: 170px;
+    border-radius: 300% 40% 0 0;
+    background: #00685a;
+    bottom: -70px;
+    right: -50px;
+}
+.sun {
+    position: absolute;
+    width: 120px;
+    height: 70px;
+    border-radius: 121px 121px 0 0;
+    background: #F4973F;
+    bottom: 65px;
+    left: 10px;
+}
+.map-marker{
+    position: absolute;
+    top: 180px;
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    border: 10px solid red;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    animation-name: marker-set;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    z-index: 1;
+}
+@keyframes marker-set {
+    0% {
+        top: -70px;
+        left: 45%;
+    }
+    100% {
+        top: 180px;
+        left: 45%;
+    }
+}
+
+/* SEA ANIMATION STYLES*/
+.sea-animation{
+    display: none;
+}
+.sea{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #00a7ba;
+    bottom: 0;
+    z-index: 1;
+}
+.sun-sea {
+    position: absolute;
+    width: 120px;
+    height: 70px;
+    border-radius: 121px 121px 0 0;
+    background: #F4973F;
+    bottom: 95px;
+    left: 50px;
+}
+.waves{
+    position: relative;
+    animation: waves-move 3s alternate infinite;
+    margin:0 0;
+}
+.wave{
+    position: absolute;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    bottom: -50px;
+    left: 60px;
+}
+.wave::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: 7px 15px;
+}
+.wave::after{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: -7px 8px;
+}
+.wave2{
+    position: absolute;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    bottom: -60px;
+    left: 200px;
+}
+.wave2::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: 7px 15px;
+}
+.wave2::after{
+    content: "";
+    display: block;
+    width: 45px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: -7px 15px;
+}
+.wave3{
+    position: absolute;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    bottom: -40px;
+    left: 360px;
+}
+.wave3::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: 7px 15px;
+}
+.wave3::after{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: -7px 8px;
+}
+.wave4{
+    position: absolute;
+    width: 35px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    bottom: -50px;
+    left: 480px;
+}
+.wave4::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: 7px 15px;
+}
+.wave4::after{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .6);
+    margin: -7px 8px;
+}
+.boat{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    right: 10px;
+    bottom: 50px;
+    animation: swim 30s linear alternate infinite;
+}
+.body{
+    width: 67px;
+    height: 20px;
+    display: block;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #d26b53;
+}
+.water-line{
+    width: 67px;
+    height: 15px;
+    background-color: #00a7ba;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+}
+.mast{
+    width: 2px;
+    height: 40px;
+    background-color: #d26b53;
+    position: absolute;
+    top: -15px;
+}
+.sail{
+    border-left: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #d26b53;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: -15px;
+    right: 36px;
+}
+@keyframes waves-move {
+    0%{margin:0px 0px;}
+    100%{margin:0px 21px;}
+}
+@keyframes swim {
+    from{
+        right: 10px;
+        bottom: 50px;
+    }
+    to{
+        right: 200px;
+        bottom: 50px;
+    }
+}
