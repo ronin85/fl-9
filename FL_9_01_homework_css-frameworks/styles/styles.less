@@ -1,0 +1,79 @@
+@import "variables";
+
+.border-red {
+    border: 1px solid @red;
+}
+
+.border-blue {
+    border: 1px solid @blue;
+}
+
+.border-yellow {
+    border: 1px solid @yellow;
+}
+
+.border-green {
+    border: 1px solid @green;
+}
+
+.background-red {
+    background-color: @red;
+}
+
+.background-blue {
+    background-color: @blue;
+}
+
+.background-yellow {
+    background-color: @yellow;
+}
+
+.background-green {
+    background-color: @green;
+}
+
+.background-grey {
+    background-color: @grey;
+}
+
+.headings-color {
+    color: @blue;
+}
+
+.main-headings {
+    padding-top: 35px;
+    border-bottom: 1px solid @blue;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    color: @blue;
+}
+
+
+
+.navbar {
+    padding: 0 1rem;
+    border-bottom: 1px solid @lightgrey;
+    .active {
+        .nav-link {
+            background-color: @blue;
+            color: #fff !important;
+        }
+    }
+    .nav-link {
+        padding: 1rem 1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .card-header {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-expand-md {
+        .container {
+            padding: 10px 0px;
+        }
+    }
+}
