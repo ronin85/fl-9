@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FL_9_14_homework_angular-part-1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="./app/app.constants.js"></script>
+    <script src="./app/app.controller.js"></script>
+    <script src="./app/app.module.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+<body>
+    <div class="wrapper" ng-app="posts">
+        <div class="main-container" ng-controller="postsController">
+            <div class="container-header">
+                <h1 class="container-header__heading">POSTS WALL</h1>
+                <input class="container-header__title-search" type="text" ng-model="searchByTitle" placeholder="Search by title...">
+            </div>
+            <div class="container-post" ng-repeat="post in posts | filter:searchText">
+                <div class="container-post__header">
+                    <img class="container-post__photo" src="{{post.photo}}" alt="user-logo">
+                    <p class="container-post__author">{{post.author}}</p>
+                </div>
+                <h4 class="container-post__title">{{post.title}}</h4>
+                <p class="container-post__text">{{post.message}}</p>
+                <div class="container-post__like">
+                    <img class="container-post__like-img" ng-click="likeIt()" src="./assets/img/3on.svg" alt="like-logo">
+                    <span class="container-post__like-count">{{post.likes}}</span>
+                    <button class="container-button container-post__edit">Edit</button>
+                </div>
+            </div>
+            <div class="container-new-post container-post" ng-show="newPostForm">
+                <div class="container-post__header">
+                    <img class="container-post__photo" src="./assets/img/Dobkin-Mikhail.png" alt="user-logo">
+                    <p class="container-post__author">Misha Dobkin</p>
+                </div>
+                <input class="container-new-post__add-title" type="text" ng-model="newPost.title">
+                <textarea class="container-new-post__add-text" rows="5" ng-model="newPost.message"></textarea>
+                <div class="container-new-post__buttons">
+                    <button class="container-button container-new-post__save" ng-click="addPost()">Save</button>
+                    <button class="container-button container-new-post__cancel" ng-click="showNewPostForm()">Cancel</button>
+                </div>
+            </div>
+            <button class="container-button container-add-post-button" ng-click="showNewPostForm()">Add new post</button>
+        </div>
+    </div>
+</body>
+</html>
