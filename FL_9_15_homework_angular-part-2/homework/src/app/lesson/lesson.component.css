@@ -1,0 +1,30 @@
+.main-container__button {
+    border: 1px solid lightslategray;
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.main-container__button:hover {
+    background-color: azure;
+}
+
+table {
+    width: 100%;
+    padding: 20px;
+}
+
+tr {
+    display: flex;
+    margin: 20px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lesson-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    margin-right: 10px;
+}

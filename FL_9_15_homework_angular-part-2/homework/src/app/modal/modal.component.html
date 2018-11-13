@@ -1,0 +1,14 @@
+<div class="wrapper" *ngIf="showModal">
+  <div class="main-form">
+    <label for="topic">Topic</label>
+    <input id="topic" type="text" [(ngModel)]="newLesson.topic" required>
+    <label for="date">Date</label>
+    <input id="date" type="text" [(ngModel)]="newLesson.date" required>
+    <label for="lecturer">Lecturer</label>
+    <input id="lecturer" type="text" [(ngModel)]="newLesson.lecturer" required>
+  </div>
+  <div class="button-block">
+    <button (click)="addLesson(); closeModal()">Add to the list</button>
+    <button (click)="closeModal()">Close modal</button>
+  </div>
+</div>

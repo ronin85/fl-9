@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="main-container">
+    <button class="main-container__button" (click)="openModal()">Add new lesson</button>
+    <div class="output">
+      <table>
+        <tr *ngFor="let lesson of lessons, let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{lesson.topic}}</td>
+          <td>{{lesson.date}}</td>
+          <td>{{lesson.lecturer}}</td>
+          <td>
+            <button class="lesson-button">Edit</button>
+            <button class="lesson-button">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <app-modal [showModal]="showModal" [lessons]="lessons" [newLesson]="newLesson"></app-modal>
+  </div>
+</div>
